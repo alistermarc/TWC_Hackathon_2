@@ -1,0 +1,219 @@
+## OVERVIEW:
+
+This database appears to be a comprehensive system for managing medical appointments, patient encounters, and associated operational workflows within an eye care practice. It captures detailed information about scheduled appointments, including patient demographics, physician details, appointment types, locations, and outcomes (kept, cancelled, no-show). The data also includes financial information like revenue estimates and payer details, as well as operational metrics such as appointment duration, resource utilization, and status updates. The presence of columns like `Encounter_Type`, `Event`, `STS`, `Can_Desc`, `Rschd_Desc`, `Workload_Type`, and various duration metrics suggests a focus on tracking and optimizing the patient journey through different stages of care, from initial scheduling and verification to the actual encounter and post-visit processing. It seems designed to provide insights into practice efficiency, revenue cycle management, and provider performance.
+
+## DATABASE INFORMATION
+
+## Database Schema:
+
+### Table: `place_holder2_backup`
+- Table Description: No description available.
+- `Business`: **STRING**
+- `Rendering`: **STRING**
+- `Appt_Dt`: **DATE**
+- `Loc_Name`: **STRING**
+- `Res_Name`: **STRING**
+- `Encounter_Type`: **STRING**
+- `Prac_Name`: **STRING**
+- `Per_Nbr`: **INTEGER**
+- `Event`: **STRING**
+- `Encounter`: **INTEGER**
+- `STS`: **STRING**
+- `Can_Desc`: **STRING**
+- `Rschd_Desc`: **STRING**
+- `Payer_Name_Lst_Enc`: **STRING**
+- `Payer_Name_Cht_Guar`: **STRING**
+- `Pat_Age_in_Years_DOS`: **INTEGER**
+- `Fin_Class_Lst_Enc`: **STRING**
+- `Surgery_Location`: **STRING**
+- `Final_Location`: **STRING**
+- `Cancelled`: **INTEGER**
+- `Expected`: **INTEGER**
+- `Kept`: **INTEGER**
+- `No_Show`: **INTEGER**
+- `Match_on_Kept_Rate`: **STRING**
+- `Kept_Rate`: **BIGNUMERIC**
+- `Expected_weighted_for_kept_rate`: **BIGNUMERIC**
+- `Actual_Rev`: **INTEGER**
+- `MCA`: **INTEGER**
+- `Include_in_MCA_Rev_Estimates`: **INTEGER**
+- `Estimated_Rev`: **BIGNUMERIC**
+- `Estimated_MCA`: **BIGNUMERIC**
+- `Count_of_Broad_Enc_Type`: **INTEGER**
+- `Broad_Event_Category`: **STRING**
+- `Workload_Type`: **STRING**
+- `Expected_Encounter_Weight`: **INTEGER**
+- `Physician_Type`: **STRING**
+- `Unique`: **STRING**
+- `Duplicate`: **INTEGER**
+- `Start_Time`: **TIME**
+- `Expected_Time_Min`: **FLOAT**
+- `AM_PM`: **STRING**
+- `day_type`: **STRING**
+- `post_op`: **INTEGER**
+- `created_by`: **STRING**
+- `modified_by`: **STRING**
+- `dataset`: **STRING**
+- `duration`: **INTEGER**
+- `start_time_hour`: **INTEGER**
+- `next_day`: **STRING**
+- `past_future_day`: **STRING**
+- `week`: **STRING**
+- `no_status`: **INTEGER**
+- `Final_Full_Capacity_Target`: **INTEGER**
+- `first_time_overbooked_flag`: **STRING**
+- `first_time_flagged`: **TIMESTAMP**
+- `percentile_target`: **INTEGER**
+- `Physician_Duration`: **INTEGER**
+- `error_type`: **STRING**
+- `Insurance_Verification_Duration`: **INTEGER**
+- `Front_Desk_Duration`: **INTEGER**
+- `Technician_Duration`: **INTEGER**
+- `Scribe_Duration`: **INTEGER**
+- `Checkout_Duration`: **INTEGER**
+- `daytype_fullday_AMPM`: **STRING**
+- `physiciantype_daytype_percentile`: **INTEGER**
+- `created_vs_appt_dt_gap`: **INTEGER**
+- `uncoded_mca_enc`: **STRING**
+- `fin_class`: **STRING**
+- `Raw_Referring`: **STRING**
+- `Clean_Referring`: **STRING**
+- `Referring_Type`: **STRING**
+- `NPI`: **STRING**
+- `Main_Payor`: **STRING**
+- `Main_Administrator`: **STRING**
+- `Main_Center_Group`: **STRING**
+- `Raw_Rendering`: **STRING**
+- `created_date`: **DATETIME**
+- `modified_date`: **DATETIME**
+- `Raw_Loc_Name`: **STRING**
+- `Raw_Surgery_Location`: **STRING**
+- `Raw_Can_Desc`: **STRING**
+
+---
+## Table Data Samples:
+
+### Samples for table `place_holder2_backup`:
+| Business | Rendering | Appt_Dt | Loc_Name | Res_Name | Encounter_Type | Prac_Name | Per_Nbr | Event | Encounter | STS | Can_Desc | Rschd_Desc | Payer_Name_Lst_Enc | Payer_Name_Cht_Guar | Pat_Age_in_Years_DOS | Fin_Class_Lst_Enc | Surgery_Location | Final_Location | Cancelled | Expected | Kept | No_Show | Match_on_Kept_Rate | Kept_Rate | Expected_weighted_for_kept_rate | Actual_Rev | MCA | Include_in_MCA_Rev_Estimates | Estimated_Rev | Estimated_MCA | Count_of_Broad_Enc_Type | Broad_Event_Category | Workload_Type | Expected_Encounter_Weight | Physician_Type | Unique | Duplicate | Start_Time | Expected_Time_Min | AM_PM | day_type | post_op | created_by | modified_by | dataset | duration | start_time_hour | next_day | past_future_day | week | no_status | Final_Full_Capacity_Target | first_time_overbooked_flag | first_time_flagged | percentile_target | Physician_Duration | error_type | Insurance_Verification_Duration | Front_Desk_Duration | Technician_Duration | Scribe_Duration | Checkout_Duration | daytype_fullday_AMPM | physiciantype_daytype_percentile | created_vs_appt_dt_gap | uncoded_mca_enc | fin_class | Raw_Referring | Clean_Referring | Referring_Type | NPI | Main_Payor | Main_Administrator | Main_Center_Group | Raw_Rendering | created_date | modified_date | Raw_Loc_Name | Raw_Surgery_Location | Raw_Can_Desc |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AEA | MANSUR MD, ARNULFO | 2025-02-11 | NM Aran Eye Associates | A Mansur  MD | clinical | Aran Eye Associates | 745886 | Chalazion Rmvl | 3161958 | Kept |  | Office R/S | OSCAR | OSCAR | None | Commercial FFS | None | NM Aran Eye Associates | 0 | 0 | 1 | 0 |  | 0.781289637088775634765625 | 0.781289637088775634765625 | None | None | 0 | 117 | 207 | None | Surgery | Physician | None | Oculoplastic | 45699745886AEANMAranEyeAssociatesPhysicianMANSURMD,ARNULFO | 1 | 10:15:00 | 29.0 | AM | Minors | 0 | Suarez, Yelianys | Admin, NextGen |   | 15 | 10 | None | Historical | None | 0 | None | None | None | 42 | 20 | No Error | 7 | 2 | 15 | 30 | 5 | SX/Clinic | 47 | 33 | Pending | FFS | None | None | None | None | None | None | None | None | 2025-01-09 00:00:00 | 2025-02-11 00:00:00 | None | None | None |
+| AEA | MANSUR MD, ARNULFO | 2025-02-07 | The Surgery Center Of CG | SX DR MANSUR | surgical | Aran Eye Associates | 694816 | ENTROPION RPR OD | None | Cancelled | PCP Rescheduled |  | Humana FFS | Humana FFS | None | Humana FFS | TSCCG | The Surgery Center Of CG | 1 | 0 | 0 | 0 |  | 0.85018408298492431640625 | 0 | None | None | 0 | None | None | None | Plastic Surgery | Physician | None | Oculoplastic | 45695694816AEATheSurgeryCenterOfCGPhysicianMANSURMD,ARNULFO | 1 | 07:45:00 | 32.0 | AM | SX | 0 | Quijano, Yenisky | Quevedo, Neris |   | 15 | 7 | None | Historical | None | 0 | None | None | None | 17 | 25 | No Error | 7 | 2 | 15 | 8 | 5 | SX | 28 | 29 | Non-Kept | FFS | None | None | None | None | None | None | None | None | 2025-01-09 00:00:00 | 2025-01-30 00:00:00 | None | None | None |
+| AEA | MANSUR MD, ARNULFO | 2025-02-07 | NM Aran Eye Associates | SX DR MANSUR | surgical | Aran Eye Associates | 390020 | PTERY W GRAFT OD | 3161287 | Kept |  |  | OSCAR | OSCAR | None | Commercial FFS | TSCCG | The Surgery Center Of CG | 0 | 0 | 1 | 0 |  | 0.85018408298492431640625 | 0.85018408298492431640625 | None | None | 0 | 720 | 1184 | None | Plastic Surgery | Physician | None | Oculoplastic | 45695390020AEANMAranEyeAssociatesPhysicianMANSURMD,ARNULFO | 1 | 07:45:00 | 32.0 | AM | Lasers | 0 | Quijano, Yenisky | Pico, Idania |   | 15 | 7 | None | Historical | None | 0 | None | None | None | 17 | 25 | No Error | 7 | 2 | 15 | 8 | 5 | SX | 28 | 31 | Pending | FFS | None | None | None | None | None | None | None | None | 2025-01-07 00:00:00 | 2025-02-18 00:00:00 | None | None | None |
+
+---
+## Column Data Analysis:
+
+### Analysis of Table `place_holder2_backup`:
+- **Business**: Text. Distinct Values=`7`. Top values: `AEA` (1454964), `SFVA` (221573), `BEC` (48916), `SCCG` (31936), `ECSC` (14108)
+- **Rendering**: Text. Distinct Values=`105`. Top values: `Diagnostic Test` (210117), `ROJAS, MARIO` (106750), `MANSUR MD, ARNULFO` (98895), `MASVIDAL MD, RAUL FELIX` (86254), `WALS MD, KENNETH T` (75811)
+- **Appt_Dt**: Date/Time. MIN=`2021-01-04`, MAX=`2025-09-19`, Distinct Values=`1342`
+- **Loc_Name**: Text. Distinct Values=`47`. Top values: `CG Aran Eye Associates` (236769), `SFVA Cypress` (208227), `HLH Aran Eye Associates` (167855), `NM Aran Eye Associates` (158778), `KD Aran Eye Associates` (149511)
+- **Res_Name**: Text. Distinct Values=`234`. Top values: `M Rojas MD` (95256), `A Mansur  MD` (92981), `R Masvidal MD` (80161), `K Wals, MD` (71666), `A Lane MD` (66612)
+- **Encounter_Type**: Text. Distinct Values=`4`. Top values: `clinical` (1554291), `surgical` (66048), `#N/A` (1487), `0` (49)
+- **Prac_Name**: Text. Distinct Values=`7`. Top values: `Aran Eye Associates` (1677223), `Braverman Eye Center` (48916), `The Surgery Center Of Coral Gables LLC` (31936), `EyeCare & SurgeryCenterFtLauderdale` (14108), `The Laser Center Of Coral Gables, LLC` (6641)
+- **Per_Nbr**: Numeric. MIN=`46`, MAX=`999999`, AVG=`461105.94`, Distinct Values=`207798`
+- **Event**: Text. Distinct Values=`1843`. Top values: `Established Patient` (682660), `New Patient` (181792), `Visual  Field` (140572), `Post Op 1 Week` (55205), `Avastin Injection` (53366)
+- **Encounter**: Numeric. MIN=`67`, MAX=`3290952`, AVG=`2570288.08`, Distinct Values=`792830`
+- **STS**: Text. Distinct Values=`6`. Top values: `Kept` (889283), `Cancelled` (538632), `No Show` (328771), `Expected` (20776), `No Status Update` (1502)
+- **Can_Desc**: Text. Distinct Values=`70`. Top values: `` (369289), `R/S Due To Schedule Change` (128272), `Patient Rescheduled` (120311), `Schedule Change OB` (67444), `Appt Error` (41878)
+- **Rschd_Desc**: Text. Distinct Values=`11`. Top values: `` (464552), `Office R/S` (283615), `Pt. R/S` (27618), `R/S To Other Provider` (5074), `PCP R/S` (4703)
+- **Payer_Name_Lst_Enc**: Text. Distinct Values=`1129`. Top values: `HealthSun La Colonia CAP` (110030), `iCare Aetna Medicare HMO FFS` (97770), `Humana FFS` (86331), `Premier Eye CarePlus IPA Cap` (80346), `Preferred Care Partners FFS` (67412)
+- **Payer_Name_Cht_Guar**: Text. Distinct Values=`1400`. Top values: `HealthSun La Colonia CAP` (107299), `Humana FFS` (85790), `iCare Aetna Medicare HMO FFS` (83256), `Premier Eye CarePlus IPA Cap` (74728), `Preferred Care Partners FFS` (64393)
+- **Fin_Class_Lst_Enc**: Text. Distinct Values=`95`. Top values: `Medicare-FFS` (280834), `HealthSun MSO Cap` (204525), `Humana FFS` (127722), `EMI CAP` (94785), `Commercial FFS` (90837)
+- **Surgery_Location**: Text. Distinct Values=`20`. Top values: `TSCCG` (33095), `ECSC` (19546), `The Selem Center` (3599), `NMBSC` (309), `Surgery Scheduled` (124)
+- **Final_Location**: Text. Distinct Values=`43`. Top values: `CG Aran Eye Associates` (214283), `SFVA Cypress` (206885), `HLH Aran Eye Associates` (164651), `NM Aran Eye Associates` (155996), `KD Aran Eye Associates` (147299)
+- **Cancelled**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.30`, Distinct Values=`2`
+- **Expected**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.01`, Distinct Values=`2`
+- **Kept**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.50`, Distinct Values=`2`
+- **No_Show**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.19`, Distinct Values=`2`
+- **Match_on_Kept_Rate**: Text. Distinct Values=`17124`. Top values: `` (65537), `SCHECTER OD, SCOTTSFVA CypressEstablished Patient` (42884), `GECHTER MD, ERICSFVA CypressEstablished Patient` (31800), `MASVIDAL MD, RAUL FELIXMasvidal - Aran Eye AssociatesEstablished Patient` (27257), `LOPEZ MD FERNANDO FCBay Aran Eye AssociatesEstablished Patient` (18482)
+- **Kept_Rate**: Numeric. MIN=`0`, MAX=`1.00960826873779296875`, AVG=`0.73`, Distinct Values=`22401`
+- **Expected_weighted_for_kept_rate**: Numeric. MIN=`0`, MAX=`1.11407009871678320496659310503317032616`, AVG=`0.52`, Distinct Values=`5776`
+- **Actual_Rev**: Numeric. MIN=`0`, MAX=`2315`, AVG=`97.17`, Distinct Values=`639`
+- **MCA**: Numeric. MIN=`0`, MAX=`3337`, AVG=`148.28`, Distinct Values=`436`
+- **Include_in_MCA_Rev_Estimates**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.02`, Distinct Values=`2`
+- **Estimated_Rev**: Numeric. MIN=`0`, MAX=`1838`, AVG=`75.34`, Distinct Values=`11133`
+- **Estimated_MCA**: Numeric. MIN=`0`, MAX=`1985`, AVG=`103.45`, Distinct Values=`11770`
+- **Broad_Event_Category**: Text. Distinct Values=`28`. Top values: `Established Patient` (829804), `New Patient` (253470), `Diagnostics` (210118), `Post Op` (156798), `Injection` (123416)
+- **Workload_Type**: Text. Distinct Values=`4`. Top values: `Physician` (1544243), `Technician` (207394), `Pre-Op` (23242), `TBD` (925)
+- **Physician_Type**: Text. Distinct Values=`10`. Top values: `General Ophthalmology` (840786), `Retina` (264843), `Medical Optometry` (252663), `Diagnostic Test` (210100), `Oculoplastic` (118904)
+- **Unique**: Text. Distinct Values=`1615446`. Top values: `45698453679AEAKDAranEyeAssociatesPhysicianARONOWICZGALLEGOMDJOELD` (36), `45701745157AEAHLHAranEyeAssociatesPhysicianMANSURMD,ARNULFO` (36), `45700553406AEAHLHAranEyeAssociatesPhysicianROJAS,MARIO` (36), `45695556690AEAGalleriaAranEyeAssociatesPhysicianFABREGAMD,MARCO` (36), `45700741907AEAKDAranEyeAssociatesPhysicianMANSURMD,ARNULFO` (36)
+- **Duplicate**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.09`, Distinct Values=`2`
+- **Expected_Time_Min**: Numeric. MIN=`-3575.0`, MAX=`638.0`, AVG=`27.44`, Distinct Values=`391`
+- **AM_PM**: Text. Distinct Values=`2`. Top values: `AM` (1035740), `PM` (743228)
+- **day_type**: Text. Distinct Values=`7`. Top values: `Clinic` (1257536), `Diagnostics` (216010), `SX` (127215), `Injections` (122460), `Lasers` (45951)
+- **post_op**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.10`, Distinct Values=`2`
+- **created_by**: Text. Distinct Values=`348`. Top values: `Suarez, Yelianys` (72413), `Ramirez, Jose` (70993), `Michel, Erline` (58218), `Diaz, Lismery` (49050), `Gonzalez, Leticia` (37837)
+- **modified_by**: Text. Distinct Values=`596`. Top values: `Admin, NextGen` (241590), `Ramirez, Jose` (43296), `Pico, Idania` (41233), `Diaz, Lismery` (34253), `Suarez, Yelianys` (32296)
+- **dataset**: Text. Distinct Values=`4`. Top values: `NextGen` (1160066), `` (465413), ` ` (100899), `Recovered` (52613)
+- **duration**: Numeric. MIN=`0`, MAX=`465`, AVG=`15.13`, Distinct Values=`23`
+- **start_time_hour**: Numeric. MIN=`0`, MAX=`23`, AVG=`10.81`, Distinct Values=`24`
+- **next_day**: Text. Distinct Values=`3`. Top values: `today` (1792), `tomorrow` (1535), `yesterday` (1517)
+- **past_future_day**: Text. Distinct Values=`2`. Top values: `Historical` (1752140), `Predictive` (26851)
+- **week**: Text. Distinct Values=`3`. Top values: `last week` (7948), `this week` (7695), `next week` (6702)
+- **no_status**: Numeric. MIN=`0`, MAX=`1`, AVG=`0.00`, Distinct Values=`2`
+- **Final_Full_Capacity_Target**: Numeric. MIN=`0`, MAX=`81`, AVG=`48.91`, Distinct Values=`81`
+- **first_time_overbooked_flag**: Text. Distinct Values=`3`. Top values: `<<Overbooked (1-7)` (97280), `<<Overbooked by 10+` (16750), `<<Overbooked by 7+` (9547)
+- **first_time_flagged**: Date/Time. MIN=`2022-10-04 05:44:28.628000+00:00`, MAX=`2025-08-18 16:56:56.994286+00:00`, Distinct Values=`466`
+- **percentile_target**: Numeric. MIN=`1`, MAX=`77`, AVG=`44.31`, Distinct Values=`77`
+- **Physician_Duration**: Numeric. MIN=`0`, MAX=`30`, AVG=`10.01`, Distinct Values=`18`
+- **error_type**: Text. Distinct Values=`3`. Top values: `No Error` (1164810), `Lacking Raw Data` (1806), `Mismatched Sister Enounter` (102)
+- **Insurance_Verification_Duration**: Numeric. MIN=`7`, MAX=`7`, AVG=`7.00`, Distinct Values=`1`
+- **Front_Desk_Duration**: Numeric. MIN=`2`, MAX=`10`, AVG=`7.93`, Distinct Values=`2`
+- **Technician_Duration**: Numeric. MIN=`0`, MAX=`20`, AVG=`17.58`, Distinct Values=`4`
+- **Scribe_Duration**: Numeric. MIN=`3`, MAX=`30`, AVG=`9.75`, Distinct Values=`7`
+- **Checkout_Duration**: Numeric. MIN=`5`, MAX=`5`, AVG=`5.00`, Distinct Values=`1`
+- **daytype_fullday_AMPM**: Text. Distinct Values=`38`. Top values: `Clinic/Clinic` (781894), `Clinic` (191953), `Diagnostics/Diagnostics` (181075), `Injections/Clinic` (81432), `SX` (56392)
+- **physiciantype_daytype_percentile**: Numeric. MIN=`2`, MAX=`81`, AVG=`60.88`, Distinct Values=`74`
+- **created_vs_appt_dt_gap**: Numeric. MIN=`-63`, MAX=`1134`, AVG=`48.51`, Distinct Values=`532`
+- **uncoded_mca_enc**: Text. Distinct Values=`4`. Top values: `Non-Kept` (904203), `Coded` (661543), `Pending` (205384), `Uncoded` (7861)
+- **fin_class**: Text. Distinct Values=`3`. Top values: `FFS` (990731), `CAP` (683175), `Self Pay` (3071)
+- **Raw_Referring**: Text. Distinct Values=`50`. Top values: `` (96413), `LA COLONIA ALVARO ALTAMIRANO` (10), `ALLAHRAKHA  MD MOHAMMED FEROZ` (9), `MORENCY MD  DORTY` (8), `CHEN MED Miami Lakes` (8)
+- **Clean_Referring**: Text. Distinct Values=`40`. Top values: `CONVIVA MEDICAL CENTER MANAGEMENT LLC` (13), `ALTAMIRANO, ALVARO` (10), `ALLAHRAKHA, MOHAMMED` (9), `DERENONCOURT, VLADIMIR` (8), `CHEN MEDICAL MIAMI LAKES INC` (8)
+- **Referring_Type**: Text. Distinct Values=`6`. Top values: `MD` (66), `Org` (27), `DO` (15), `NP` (13), `Others` (12)
+- **NPI**: Text. Distinct Values=`42`. Top values: `1003118555` (10), `1710913116` (9), `1518921428` (8), `1518218247` (8), `NA` (8)
+- **Main_Payor**: Text. Distinct Values=`3`. Top values: `Humana` (17), `Healthsun` (11), `LMC` (1)
+- **Main_Administrator**: Text. Distinct Values=`3`. Top values: `Conviva` (17), `Healthsun` (11), `LMC` (1)
+- **Main_Center_Group**: Text. Distinct Values=`5`. Top values: `La Colonia` (11), `Doctors Medical` (3), `MCCI` (2), `CAC FL` (1), `LMC` (1)
+- **Raw_Rendering**: Text. Distinct Values=`56`. Top values: `Rojas MD, Mario` (5571), `MASVIDAL MD RAUL FELIX` (5185), `ARONOWICZ GALLEGO MD JOEL` (5142), `FLORES, YARITZA` (4731), `MANSUR MD ARNULFO` (4658)
+- **created_date**: Date/Time. MIN=`2021-05-10 00:00:00`, MAX=`2025-08-18 00:00:00`, Distinct Values=`1391`
+- **modified_date**: Date/Time. MIN=`2021-04-05 00:00:00`, MAX=`2025-08-18 00:00:00`, Distinct Values=`1419`
+- **Raw_Loc_Name**: Text. Distinct Values=`23`. Top values: `CG Aran Eye Associates` (11897), `Miami Aran Eye Associates` (10977), `SFVA Ft Lauderdale` (10010), `HLH  Aran Eye Associates` (8468), `NM Aran Eye Associates` (8228)
+- **Raw_Surgery_Location**: Text. Distinct Values=`6`. Top values: `N/A` (86775), `TSCCG` (1150), `ECSC` (919), `The Selem Center` (183), `` (118)
+- **Raw_Can_Desc**: Text. Distinct Values=`51`. Top values: `` (61920), `Pt Rescheduled` (6445), `R/S Due To Schedule Change` (4947), `Schedule Change OB` (4628), `Appt Error` (2046)
+
+## IMPORTANT BIGQUERY NOTES:
+
+*   **Fully Qualified Names:** Always use the fully qualified table name in the format `project_id.dataset_id.table_name` for clarity and to avoid ambiguity.
+*   **Backticks:** Enclose all table names, dataset names, and column names in backticks (``) to handle reserved keywords and special characters.
+*   **String Literals:** Use single quotes (') for all string and date/time literals.
+*   **JOIN Clauses:** Utilize `JOIN` clauses (`INNER JOIN`, `LEFT JOIN`, etc.) to combine data from different tables based on common keys.
+*   **String Matching:** Use the `LIKE` operator with wildcard characters (`%` for any sequence of characters, `_` for a single character) for partial text matching.
+*   **Date and Time Functions:** Leverage BigQuery's extensive date and time functions for manipulation and comparison (e.g., `FORMAT_TIMESTAMP`, `DATE_TRUNC`, `EXTRACT`, `TIMESTAMP_DIFF`).
+*   **Aggregation:** Use aggregate functions like `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()` in conjunction with `GROUP BY` clauses to summarize data.
+*   **Filtering:** Apply `WHERE` clauses to filter records based on specific conditions. For partitioned tables, filtering on the partitioning column is crucial for performance.
+*   **Table/Column Descriptions:** Refer to provided table and column descriptions to understand the data better and construct more accurate queries.
+*   **Partitioning and Clustering:** If the table is partitioned or clustered (e.g., by `Appt_Dt`), always include filters on these columns in your `WHERE` clause to minimize data scanned and improve query performance.
+
+## EXAMPLES:
+
+**Question:** "What is the average appointment duration for each Business unit in the last quarter of 2024, categorized by whether the appointment was Kept or Cancelled?"
+**SQL Query:** "SELECT t.Business, t.STS, AVG(t.duration) AS average_duration FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.Appt_Dt BETWEEN '2024-10-01' AND '2024-12-31' AND t.STS IN ('Kept', 'Cancelled') GROUP BY t.Business, t.STS ORDER BY t.Business, t.STS;"
+
+**Question:** "List the top 5 physicians by the total number of 'Established Patient' encounters they had in the first half of 2025, and show their average appointment duration for these encounters."
+**SQL Query:** "SELECT t.Res_Name, COUNT(t.Encounter) AS total_established_patients, AVG(t.duration) AS avg_duration FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.Event = 'Established Patient' AND EXTRACT(YEAR FROM t.Appt_Dt) = 2025 AND EXTRACT(MONTH FROM t.Appt_Dt) BETWEEN 1 AND 6 GROUP BY t.Res_Name ORDER BY total_established_patients DESC LIMIT 5;"
+
+**Question:** "Calculate the percentage of appointments that were rescheduled ('Rschd_Desc' is not empty) for each Location Name, considering only appointments that were not 'Kept'."
+**SQL Query:** "SELECT t.Loc_Name, (COUNT(CASE WHEN t.Rschd_Desc <> '' THEN 1 ELSE NULL END) * 100.0) / COUNT(t.Encounter) AS reschedule_percentage FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.STS <> 'Kept' GROUP BY t.Loc_Name HAVING COUNT(t.Encounter) > 0 ORDER BY reschedule_percentage DESC;"
+
+**Question:** "Find the total estimated revenue for 'surgical' encounter types for each 'Main_Payor' in 2023, and also calculate the average 'Kept_Rate' for these appointments."
+**SQL Query:** "SELECT t.Main_Payor, SUM(t.Estimated_Rev) AS total_estimated_revenue, AVG(t.Kept_Rate) AS average_kept_rate FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.Encounter_Type = 'surgical' AND EXTRACT(YEAR FROM t.Appt_Dt) = 2023 GROUP BY t.Main_Payor ORDER BY total_estimated_revenue DESC;"
+
+**Question:** "Identify locations where the 'Front_Desk_Duration' plus 'Insurance_Verification_Duration' is on average greater than 15 minutes, and list the count of 'No Show' appointments for these locations in 2024."
+**SQL Query:** "SELECT t.Loc_Name, COUNT(CASE WHEN t.STS = 'No Show' THEN 1 ELSE NULL END) AS no_show_count FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE EXTRACT(YEAR FROM t.Appt_Dt) = 2024 GROUP BY t.Loc_Name HAVING AVG(t.Front_Desk_Duration + t.Insurance_Verification_Duration) > 15 ORDER BY no_show_count DESC;"
+
+**Question:** "What is the count of appointments for each 'Physician_Type' that were 'Cancelled' and had a 'Raw_Can_Desc' containing 'Schedule Change', broken down by the 'AM_PM' indicator, for appointments in the month of November 2024?"
+**SQL Query:** "SELECT t.Physician_Type, t.AM_PM, COUNT(t.Encounter) AS cancelled_count FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.STS = 'Cancelled' AND t.Raw_Can_Desc LIKE '%Schedule Change%' AND EXTRACT(YEAR FROM t.Appt_Dt) = 2024 AND EXTRACT(MONTH FROM t.Appt_Dt) = 11 GROUP BY t.Physician_Type, t.AM_PM ORDER BY t.Physician_Type, t.AM_PM;"
+
+**Question:** "For each Business unit, determine the total number of appointments that were marked as 'No Show' or 'Cancelled', and calculate the percentage of these against the total appointments for that Business unit, considering only appointments from the last 6 months."
+**SQL Query:** "SELECT t.Business, SUM(CASE WHEN t.STS IN ('No Show', 'Cancelled') THEN 1 ELSE 0 END) AS problem_appointments_count, COUNT(t.Encounter) AS total_appointments_count, (SUM(CASE WHEN t.STS IN ('No Show', 'Cancelled') THEN 1 ELSE 0 END) * 100.0) / COUNT(t.Encounter) AS percentage_problem_appointments FROM `your_project_id.your_dataset_id.place_holder2_backup` AS t WHERE t.Appt_Dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 6 MONTH) GROUP BY t.Business HAVING COUNT(t.Encounter) > 0 ORDER BY percentage_problem_appointments DESC;"

@@ -9,3 +9,12 @@ google-auth
 google-auth-httplib2
 google-auth-oauthlib
 python-dotenv
+
+# google-cloud-aiplatform[agent_engines, adk]
+# google-adk
+cloudpickle
+pydantic
+pyyaml
+ipykernel
+# python-dotenv
+google-cloud-bigquery
