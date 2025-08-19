@@ -32,7 +32,7 @@ ROOT_AGENT_MODEL = os.environ.get("ROOT_AGENT_MODEL", "gemini-2.5-flash")
 # This is the main agent for interacting with the BigQuery database.
 # Its instruction is the comprehensive prompt we've built, which contains all the
 # database context and reasoning logic. The agent's tool is the SQL query executor.
-adk_bq_agent = Agent(
+bq_agent = Agent(
     name="bigquery_agent",
     model=ROOT_AGENT_MODEL,
     description="An agent that understands questions about a BigQuery database, generates SQL, executes it, and provides answers.", # Updated description

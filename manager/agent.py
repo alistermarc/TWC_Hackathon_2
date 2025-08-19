@@ -1,7 +1,7 @@
 from google.adk.agents import Agent
 from .sub_agents.rag_agent.agent import rag_agent
 from .sub_agents.sop_agent.agent import sop_agent
-from .sub_agents.adk_bq_agent.agent import adk_bq_agent
+from .sub_agents.bq_agent.agent import bq_agent
 
 root_agent = Agent(
     name="manager",
@@ -10,7 +10,7 @@ root_agent = Agent(
     sub_agents=[
         rag_agent,
         sop_agent,
-        adk_bq_agent,
+        bq_agent,
     ],
     instruction="""
     You are the manager agent. Your primary role is to understand the user's request and delegate it to the appropriate sub-agent. You have three sub-agents available:
