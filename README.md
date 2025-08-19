@@ -1,6 +1,6 @@
-# Vertex AI Multi-Agent Framework with RAG and SOP Agents (using ADK)
+# Vertex AI Multi-Agent Framework with RAG, SOP, and BigQuery Agents (using ADK)
 
-This repository contains a Google Agent Development Kit (ADK) implementation of a multi-agent framework featuring a manager agent that delegates tasks to specialized sub-agents: a Retrieval-Augmented Generation (RAG) agent and a Standard Operating Procedure (SOP) agent.
+This repository contains a Google Agent Development Kit (ADK) implementation of a multi-agent framework featuring a manager agent that delegates tasks to specialized sub-agents: a Retrieval-Augmented Generation (RAG) agent, a Standard Operating Procedure (SOP) agent, and a BigQuery agent.
 
 ## Overview
 
@@ -24,6 +24,13 @@ The SOP Agent allows you to:
 - Search for Standard Operating Procedures (SOPs) within a Google Sheet based on keywords.
 - Retrieve and understand the content of a specific SOP.
 - Answer questions about procedures, ensuring it provides information from the latest revision if multiple are present.
+
+### BigQuery Agent Capabilities
+
+The BigQuery Agent allows you to:
+
+- Query BigQuery tables using natural language.
+- The agent translates your natural language questions into SQL queries and executes them against your BigQuery datasets.
 
 ## Prerequisites
 
@@ -85,6 +92,8 @@ You interact with the system through the `manager` agent. The manager analyzes y
 
 - **For SOP-related tasks**: Ask questions about procedures at 'Those Who Care (TWC)'. For example: "How do I onboard a new employee?" or "What is the procedure for expense reports?". The agent will search the SOP master list and retrieve the relevant information.
 
+- **For BigQuery-related tasks**: Ask questions about your data in BigQuery. For example: "How many users signed up in the last 7 days?" or "What are the top 5 most popular products?". The agent will query the relevant BigQuery tables to get the answer.
+
 ## Troubleshooting
 
 If you encounter issues:
@@ -106,6 +115,6 @@ If you encounter issues:
 
 ## Additional Resources
 
-- [Vertex AI RAG Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/rag-overview)
+- [Vertex AI RAG Documentation](https://cloud.google.com/vertex-ai/docs/rag-overview)
 - [Google Agent Development Kit (ADK) Documentation](https://github.com/google/agents-framework)
 - [Google Cloud Authentication Guide](https://cloud.google.com/docs/authentication)
