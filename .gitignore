@@ -2,4 +2,4 @@
 __pycache__/
 .venv/
 thosewhocare-data-1c04d8e3f1bd.json
-manager/sub_agents/bq_agent/bigquery_context.txt
+bigquery_context.txt
